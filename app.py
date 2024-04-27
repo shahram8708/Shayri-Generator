@@ -7,7 +7,7 @@ app = Flask(__name__, static_url_path='/static')
 
 logging.basicConfig(level=logging.DEBUG)
 
-API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDvjznpGbSCl39nXhsii4KQBJUlLfSZ8RE"
+API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAvXDlCJP8MtdANPlwtU0fzuPYCHjjBOms"
 
 DEFAULT_TEXT = "Write me poetry. But poetry should be in Hindi. But it should be written in English."
 
