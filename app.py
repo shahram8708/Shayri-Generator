@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBt_UKi-gC5PM9VsIZ0TjoJMAVKsYM0KVU"
 
-DEFAULT_TEXT = "Generate full song lyrics. But song lyrics should be in Hindi. But it should be written in English."
+DEFAULT_TEXT = "Write me poetry. But poetry should be in Hindi. But it should be written in English."
 
 @app.route('/')
 def index():
@@ -26,12 +26,12 @@ def search():
                     story_content = story_content.replace('*', "")  
                     return render_template('result.html', story_content=story_content)
                 else:
-                    error_msg = "Failed to generate Song Lyrics content due to safety concerns. Please try again with a different query."
+                    error_msg = "Failed to generate Shayri content due to safety concerns. Please try again with a different query."
                     return render_template('index.html', error=error_msg)
-        error_msg = "Failed to generate Song Lyrics content. Please try again."
+        error_msg = "Failed to generate Shayri content. Please try again."
         return render_template('index.html', error=error_msg)
     else:
-        error_msg = "Please enter a valid Song Lyrics prompt."
+        error_msg = "Please enter a valid Shayri prompt."
         return render_template('index.html', error=error_msg)
 
 def generate_story(prompt):
